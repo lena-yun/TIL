@@ -1,0 +1,74 @@
+---------------------------
+2020.09.07(목)
+Django Web Framework
+----------------------------
+
+MVT패턴
+
+#프로젝트 생성
+>django-admin startproject 
+
+>dir/w
+>cd webserver
+> dir/w	//경로확인
+
+#App 생성
+>python manage.py startapp greetingApp	//app만들기
+
+>cd djangoWEB
+#Server 실행하는 명령어
+> python manage.py runserver
+
+
+http://serverip:port/app/xxxx,	
+http://localhost:8000/app/index등등(사용자지정) 	
+
+#webserver>settings.py
+ALLOWED_HOSTS = ['127.0.0.1','localhost']
+TIME_ZONE = 'Asia/Seoul'
+
+#webserver>urls.py
+from django.shortcuts import render, HttpResponse
+
+def greeting(request) :
+    return HttpResponse('섭이와 함께하는 장고 프레임워크~')
+
+
+#webserver>settings.py
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'greetingApp', //추가
+]
+
+-----------------------------#####
+
+templates
+- html(tag + text)
+- {{ print }}
+- {% 동적 코드를 작성하고자 할 때	%}
+- {% 프리젠테이션 레이어에 로직심을 수 있다%}
+- {% for(),,, if문,,, 등등	%}
+
+
+#모델 마이그레이션
+# 사용자 모델 -> DB(테이블) 만드는 명령어
+python manage.py makemigrations
+
+# 테이블의 속성들을 실제로 반영
+python manage.py migrate
+
+# 확인하기 위한 admin의 계정을 생성??!
+python manage.py createsuperuser
+
+
+#######################
+<post랑 get방식의 차이>
+get은 아이디 비번이 주소 url에 다 보여지고
+post는 숨겨서 전송.
+
+#######
