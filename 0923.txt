@@ -1,0 +1,57 @@
+장고에서는 view에서만 세션을 건드릴수있음!
+
+attr() : 요소에 속성을 추가하는 함수
+
+post방식은 보안토큰이 필요 {%  csrf_token %}
+
+AJax : 자바스트립트와 XML을 이용한 비동기 방식의 연동 방법론
+
+
+-----------------------------------0924(목)
+model
+view
+controll
+template
+
+m-db
+v(html)
+c(view)
+
+m-db
+v-views
+t-html
+
+mvc - mvt
+
+
+* csv -> model
+* django - 파일업로드(.csv)
+* django - visualization(시각화) - script(json)
+* numpy - pandas - (matplot , seaborn)
+* script - jquery , d3 , google chart , highchart
+* ajax - jquery( $.ajax() )
+
+
+비정형 데이터 - dataframe(pandas) - (.csv) - model(class)
+
+엑셀 -> python code DB 연동 로직
+
+
+chart - script - django - data
+
+
+
+var text = "{{ txt }}"      
+// 받는 데이터가 문자열일 경우 앞뒤에 "를 붙여 문자열로 인식되게 해야한다.
+
+
+ajax - 비동기 통신방식 (restful api service)
+
+
+
+
+
+
+
+
+
